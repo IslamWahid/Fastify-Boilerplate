@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  api:
+    container_name: api
+    build: .
+    ports:
+      - '3000:3000'
+    links:
+      - mongo
+    command: npm run start
+    volumes:
+      - .:/app
+
+  mongo:
+    image: mongo
+    ports:
+      - '27017:27017'
+    volumes:
+      - /data/mongodb/db:/data/db

@@ -1,0 +1,13 @@
+{
+  "extends": ["eslint:recommended", "plugin:jest/recommended"],
+  "plugins": ["jest"],
+  "env": {
+    "node": true,
+    "es6": true,
+    "jest/globals": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 9,
+    "sourceType": "module"
+  }
+}
