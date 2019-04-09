@@ -39,3 +39,10 @@ module.exports = fastify;
     process.exit(1);
   }
 })();
+
+process.on('unhandledRejection', errorHandler);
+process.on('uncaughtException', errorHandler);
+
+function errorHandler(err) {
+  fastify.log.error(err);
+}
