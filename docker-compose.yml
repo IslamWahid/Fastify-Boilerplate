@@ -7,7 +7,9 @@ services:
       - '3000:3000'
     links:
       - mongo
-    command: npm run start
+    environment:
+      - NODE_ENV=dev
+    command: npm run start:dev
     volumes:
       - .:/app
 

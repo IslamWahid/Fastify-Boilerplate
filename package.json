@@ -10,7 +10,7 @@
     "url": "https://github.com/IslamWahid/Fastify-Boilerplate.git"
   },
   "scripts": {
-    "start:dev": "NODE_ENV=dev nodemon --inspect-brk src/app.js",
+    "start:dev": "NODE_ENV=dev nodemon src/app.js",
     "start": "NODE_ENV=prod node src/app.js",
     "test": "jest",
     "format": "prettier-eslint --single-quote --write \"src/**/*.js\""
