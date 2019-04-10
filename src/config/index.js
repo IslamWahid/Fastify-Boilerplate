@@ -6,7 +6,7 @@ const baseConfig = {
   name: 'API',
   port: process.env.PORT || 3000,
   mongodb: {
-    url: process.env.MONGO_URL,
+    url: `mongodb://${process.env.MONGO_URL || 'mongo/db_name'}`,
     options: {
       useNewUrlParser: true
     }
